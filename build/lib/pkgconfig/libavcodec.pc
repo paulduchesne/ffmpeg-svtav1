@@ -1,0 +1,14 @@
+prefix=/Users/paulduchesne/git/ffmpeg-svtav1/build/
+exec_prefix=${prefix}
+libdir=/Users/paulduchesne/git/ffmpeg-svtav1/build//lib
+includedir=/Users/paulduchesne/git/ffmpeg-svtav1/build//include
+
+Name: libavcodec
+Description: FFmpeg codec library
+Version: 58.123.100
+Requires: libswresample >= 3.8.100, libavutil >= 56.65.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lavcodec -liconv -lm -L/usr/local/Cellar/dav1d/0.7.1/lib -ldav1d -lz -framework AudioToolbox -L/usr/local/lib -lSvtAv1Enc -lpthread -lm -pthread -framework VideoToolbox -framework CoreFoundation -framework CoreMedia -framework CoreVideo -framework CoreServices
+Libs.private: 
+Cflags: -I${includedir}

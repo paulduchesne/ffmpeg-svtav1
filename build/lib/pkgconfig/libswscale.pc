@@ -1,0 +1,14 @@
+prefix=/Users/paulduchesne/git/ffmpeg-svtav1/build/
+exec_prefix=${prefix}
+libdir=/Users/paulduchesne/git/ffmpeg-svtav1/build//lib
+includedir=/Users/paulduchesne/git/ffmpeg-svtav1/build//include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 5.8.100
+Requires: libavutil >= 56.65.100
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lswscale -lm
+Libs.private: 
+Cflags: -I${includedir}
